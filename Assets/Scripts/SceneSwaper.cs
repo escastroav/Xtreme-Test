@@ -1,24 +1,14 @@
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SceneSwaper : MonoBehaviour
 {
-    [Tooltip("Utilizado par spawnear objetos persistentes.")]
-    [SerializeField] GameObject persistentObject = null;
-    [SerializeField] bool hasSpawned = false;
-    private void Awake() {
-        if(hasSpawned)
-            return;
-        
-        SpawnPersistentObject();
-        
-        hasSpawned = true;
+    private void Start() {
+        Button gameButton = GameObject.Find("PlayButton").GetComponent<Button>();        
+        gameButton.onClick.AddListener(LoadGameScenes);           
     }
-
-    private void SpawnPersistentObject()
+    public void LoadGameScenes()
     {
-        GameObject persistent = Instantiate(persistentObject);  
-        DontDestroyOnLoad(persistent);
+        SceneManager.LoadScene(1);
     }
-
-
 }
