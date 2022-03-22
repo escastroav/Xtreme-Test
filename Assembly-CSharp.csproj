@@ -38,6 +38,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\SceneSwaper.cs" />
      <Compile Include="Assets\Scripts\PersistentObjectsSpawner.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMotion.cs" />
+     <Compile Include="Assets\Scripts\Player\IMovable.cs" />
+     <Compile Include="Assets\Scripts\Player\LocomotionStates.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCollisions.cs" />
+     <Compile Include="Assets\Scripts\Player\OnAir.cs" />
+     <Compile Include="Assets\Scripts\Player\OnGound.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
